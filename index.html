@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flight search engine</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
+      integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container p-6-x">
+      <section>
+        <h1>Flight search engine</h1>
+        <p>
+          Simply change filters and see results. <a href="https://github.com/magdastolarczyk">Magda Stolarczyk</a> 2017.
+        </p>
+      </section>
+      <section class="filters">
+        <h2>Filters</h2>
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <label>Origin</label>
+            <select id="origin" class="form-control">
+              <option value="NL">Netherlands</option>
+              <option value="US">United States</option>
+              <option value="DE">Germany</option>
+              <option value="RU">Russia</option>
+              <option value="PL">Poland</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3">
+            <label>Destination</label>
+            <select id="destination" class="form-control">
+              <option value="NL">Netherlands</option>
+              <option value="US" selected>United States</option>
+              <option value="DE">Germany</option>
+              <option value="RU">Russia</option>
+              <option value="PL">Poland</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3">
+            <label>Start date</label>
+            <select id="start" class="form-control">
+              <option value="0">
+                Today
+              </option>
+              <option value="1">
+                Tomorrow
+              </option>
+              <option value="7">
+                1 week
+              </option>
+              <option value="31">
+                1 month
+              </option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3">
+            <label>Days</label>
+            <div class="input-group">
+              <input id="days" type="number" class="form-control" value="5" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-secondary" id="days-sub">-</button>
+              </span>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" id="days-add">+</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Results <span id="results-badge" class="badge badge-success">0</span></h2>
+        <div id="results" class="row">
+        </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
